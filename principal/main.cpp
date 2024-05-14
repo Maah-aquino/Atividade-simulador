@@ -28,8 +28,8 @@ using std::string;
 
  main()
 {
-   // ArmaAtaque* arma  = new Rosa("Super Rosa Amarela",0,10);
-   // ArmaAtaque* arma2 = new Colher("Colher de Pata",0,50);
+    ArmaAtaque* arma  = new Rosa("Super Rosa Amarela",0,10);
+    ArmaAtaque* arma2 = new Colher("Colher de Pata",0,50);
     ArmaAtaque* besta  = new Besta("Arma super Roubada",50,100);
     ArmaAtaque* espada  = new Espada("Espada LONGCLAW",15,20);
     ArmaAtaque* lança = new Lanca("Lança longa",20,30);
@@ -42,21 +42,21 @@ using std::string;
     ArmaDefesa* balaclava = new BalaClava("Malha de aço", 11);
     ArmaDefesa* capa = new Capa("so deixa estiloso", 1);
     ArmaDefesa* armadura = new Armadura("Defesa Super Roubada", 1000);
-   // Personagem* p1 = new Chaves(1, "Chaves Eq1", 100, arma, escudo);
-   // Personagem* p3 = new Chaves(1, "Chaves Eq1 - Reserva", 100, arma, escudo);
-   // Personagem* p2 = new Chaves(2, "Chaves Eq2", 40, arma, escudo);
-   // Personagem* p4 = new Chaves(2, "Chaves Eq2 - Reserva", 100, arma, escudo);
+    Personagem* p1 = new Chaves(1, "Chaves Eq1", 100, arma, escudo);
+    Personagem* p3 = new Chaves(1, "Chaves Eq1 - Reserva", 100, arma, escudo);
+    Personagem* p2 = new Chaves(2, "Chaves Eq2", 40, arma, escudo);
+    Personagem* p4 = new Chaves(2, "Chaves Eq2 ", 60, arma, escudo);
     Personagem* p5 = new Arya(1, "Arya Eq1", 5, adaga, escudo);
-    Personagem* p6 = new Snow(1, "Snow Eq1 - Reserva", 10, espada, pederneira);
+    Personagem* p6 = new Snow(1, "Snow Eq1", 10, espada, pederneira);
     Personagem* p7 = new Tyrion(2, " TyrionEq2",50, lança, balaclava );
     Personagem* p8 = new Daenerys(2, "Daenerys Eq2 - Reserva", 11, machado, manopla);
     Personagem* p9 = new Cersei(2, "Cersei Eq2 - Reserva", 8, machado, capa);
 
     Simulador* simulador = new Simulador();
-    //simulador->adicionarPersonagem(p1, 1);
-    //simulador->adicionarPersonagem(p2, 2);
-   // simulador->adicionarPersonagem(p3, 1);
-    //simulador->adicionarPersonagem(p4, 2);
+    simulador->adicionarPersonagem(p1, 1);
+    simulador->adicionarPersonagem(p2, 2);
+    simulador->adicionarPersonagem(p3, 1);
+    simulador->adicionarPersonagem(p4, 2);
     simulador->adicionarPersonagem(p5, 1);
     simulador->adicionarPersonagem(p6, 1);
     simulador->adicionarPersonagem(p7, 2);

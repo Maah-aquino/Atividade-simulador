@@ -75,17 +75,7 @@ Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
         return nullptr;
     }
 
-   int contador = 0;
-    while (contador < tamanho)
-    {
-        if (equipe[contador]->getVida()>0)
-        {
-            return equipe[contador];
-        }
-        contador++;
-
-    }
-
+  
 
  // Define a semente para a função rand() com base no tempo atual
     std::srand(static_cast<unsigned int>(std::time(nullptr))); // segundo o video static_cast converte a valor do tempo em um unsigned
@@ -109,6 +99,16 @@ Personagem* Simulador::proximoPersonagem(vector<Personagem*> equipe)
             // Se tiver vida, retorna esse personagem
             return personagem;
         }
+    }
+ int contador = 0;
+    while (contador < tamanho)
+    {
+        if (equipe[contador]->getVida()>0)
+        {
+            return equipe[contador];
+        }
+        contador++;
+
     }
 
     // Se nenhum personagem com vida for encontrado, retorna nulo
